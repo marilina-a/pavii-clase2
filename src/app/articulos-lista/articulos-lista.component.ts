@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import {ArticuloFamilia} from '../models/articulofamilia';
 import {ArticulosFamilias} from '../models/articulosfamilias-collection';
 import { ActivatedRoute } from '@angular/router';
+import { ArticulosFamiliasService } from '../articulos-familias.service';
 @Component({
   selector: 'app-articulos-lista',
   templateUrl: './articulos-lista.component.html',
-  styleUrls: ['./articulos-lista.component.css']
+  styleUrls: ['./articulos-lista.component.css'],
+  providers:[ArticulosFamiliasService]
 })
 export class ArticulosListaComponent implements OnInit {
   id:string;

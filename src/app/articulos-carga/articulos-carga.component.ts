@@ -20,9 +20,14 @@ export class ArticulosCargaComponent implements OnInit {
   }
 
   grabar(){
-    ArticulosFamilias.push(
+    if(this.fg.valid){
+      ArticulosFamilias.push(
       { IdArticuloFamilia: Number(this.fg.value.IdArticuloFamilia), Nombre: this.fg.value.Nombre });
       window.alert('Articulo familia almacenado')
+    }
+    else{
+      window.alert('Ingrese un valor')
+    }
   }
 
 }

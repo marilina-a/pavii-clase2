@@ -6,6 +6,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { ArticulosListaComponent } from './articulos-lista/articulos-lista.component';
 import {RouterModule} from '@angular/router';
 import {ArticulosCargaComponent} from './articulos-carga/articulos-carga.component';
+import { ArticulosFamiliasService } from './articulos-familias.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,ReactiveFormsModule,RouterModule.forRoot([{path: 'listaarticulos/:id',component: ArticulosListaComponent},
@@ -14,6 +15,7 @@ import {ArticulosCargaComponent} from './articulos-carga/articulos-carga.compone
   {path: 'principal',component: PrincipalComponent},
   {path: '',component: PrincipalComponent}]) ],
   declarations: [MenuComponent, PrincipalComponent, ArticulosListaComponent, ArticulosCargaComponent],
-  bootstrap:    [ PrincipalComponent  ]
+  bootstrap:    [ PrincipalComponent  ],
+  providers: [ArticulosFamiliasService]
 })
 export class AppModule { }
